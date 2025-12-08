@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons"; 
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
@@ -27,7 +27,7 @@ function Sidebar() {
           </h1>
         </section>
         <NavLink
-          to="/user"
+          to="/home"
           className={({ isActive }) =>
             isActive
               ? "flex items-center  gap-[5px] bg-[#6357F9]  font-extrabold py-[10px] px-[12px] rounded-[10px] text-white transition-all duration-300 "
@@ -37,7 +37,7 @@ function Sidebar() {
           <FontAwesomeIcon icon={faHome} size="2xl" /> <span>Home</span>
         </NavLink>
         <NavLink
-          to="/user/courses"
+          to="/courses"
           className={({ isActive }) =>
             isActive
               ? "flex items-center  gap-[5px] bg-[#6357F9]  font-extrabold py-[10px] px-[12px] rounded-[10px] text-white transition-all duration-300 "
@@ -48,7 +48,7 @@ function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/user/leaderboard"
+          to="/leaderboard"
           className={({ isActive }) =>
             isActive
               ? "flex items-center  gap-[5px] bg-[#6357F9]  font-extrabold py-[10px] px-[12px] rounded-[10px] text-white transition-all duration-300 "
@@ -59,7 +59,7 @@ function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/user/quiz"
+          to="/quiz"
           className={({ isActive }) =>
             isActive
               ? "flex items-center  gap-[5px] bg-[#6357F9]  font-extrabold py-[10px] px-[12px] rounded-[10px] text-white transition-all duration-300 "
@@ -70,7 +70,7 @@ function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/user/profile"
+          to="/profile"
           className={({ isActive }) =>
             isActive
               ? "flex items-center  gap-[5px] bg-[#6357F9]  font-extrabold py-[10px] px-[12px] rounded-[10px] text-white transition-all duration-300 "

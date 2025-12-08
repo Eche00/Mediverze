@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons"; 
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
@@ -14,19 +14,19 @@ function Mobilenav() {
       <nav className=" h-[55px] py-[10px] px-[20px] flex items-center justify-between w-full   text-[12px] ">
         {/* home  */}
         <NavLink
-          to="/user"
+          to="/home"
           className={({ isActive }) =>
             isActive
               ? "flex items-center justify-center gap-[5px]  font-extrabold py-[6px]  rounded-[10px] text-white transition-all duration-300"
               : "flex items-center justify-center text-gray-500 font-bold transition-all duration-300"
           }>
           {" "}
-          <FontAwesomeIcon icon={faHome} size="2xl" /> 
+          <FontAwesomeIcon icon={faHome} size="2xl" />
         </NavLink>
 
         {/* courses  */}
         <NavLink
-          to="/user/courses"
+          to="/courses"
           className={({ isActive }) =>
             isActive
               ? "flex items-center justify-center gap-[5px]   font-extrabold py-[6px]  rounded-[10px] text-white transition-all duration-300"
@@ -38,7 +38,7 @@ function Mobilenav() {
 
         {/* leaderboard  */}
         <NavLink
-          to="/user/leaderboard"
+          to="/leaderboard"
           className={({ isActive }) =>
             isActive
               ? "flex items-center justify-center gap-[5px]   font-extrabold py-[6px]  rounded-[10px] text-white transition-all duration-300"
@@ -50,7 +50,7 @@ function Mobilenav() {
 
         {/* quiz */}
         <NavLink
-          to="/user/quiz"
+          to="/quiz"
           className={({ isActive }) =>
             isActive
               ? "flex items-center justify-center gap-[5px]   font-extrabold py-[6px]  rounded-[10px] text-white transition-all duration-300"
@@ -62,7 +62,7 @@ function Mobilenav() {
 
         {/* profile  */}
         <NavLink
-          to="/user/profile"
+          to="/profile"
           className={({ isActive }) =>
             isActive
               ? "flex items-center justify-center gap-[5px]   font-extrabold py-[6px]  rounded-[10px] text-white transition-all duration-300"

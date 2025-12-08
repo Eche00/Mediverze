@@ -14,30 +14,31 @@ import All from "./coursescomponent/courses/All";
 import LevelTwo from "./coursescomponent/courses/LevelTwo";
 import LevelThree from "./coursescomponent/courses/LevelThree";
 import LevelFour from "./coursescomponent/courses/LevelFour";
+import CourseViewer from "./coursescomponent/courses/CourseViewer";
 
 function App() {
 
   return (
-    <div className="   h-auto overflow-hidden bg-[#DEEAFD]  ">
-        <Routes>
-          <Route path="/user" element={<Container />}>
-            <Route path="/user/"  element={<Home />} />
-            <Route path="/user/courses" element={<Courses />} >
+    <div className="h-auto overflow-hidden bg-[#DEEAFD]  ">
+      <Routes>
+        <Route path="/" element={<Container />}>
+          <Route index element={<Welcome />} />
+          <Route path="home" element={<Home />} />
+          <Route path="courses" element={<Courses />} >
             <Route index element={<All />} />
-            <Route path="/user/courses/200l" element={<LevelTwo />} />
-            <Route path="/user/courses/300l" element={<LevelThree />} />
-            <Route path="/user/courses/400l" element={<LevelFour />} />
-            
-            </Route>
-            <Route path="/user/leaderboard" element={<Leaderboard />} />
-            <Route path="/user/quiz" element={<Quiz />} />
-            <Route path="/user/profile" element={<Profile />} />
+            <Route path="200l" element={<LevelTwo />} />
+            <Route path="300l" element={<LevelThree />} />
+            <Route path="400l" element={<LevelFour />} />
+            <Route path=":level/:courseId" element={<CourseViewer />} />
           </Route>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-        </Routes>
+          <Route path="leaderboard" element={<Leaderboard />} />
+          <Route path="quiz" element={<Quiz />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+      </Routes>
     </div>
   );
 }
