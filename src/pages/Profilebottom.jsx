@@ -56,41 +56,41 @@ function Profilebottom({ about }) {
     <div>
       {about ? (
         <div className="flex flex-col gap-[10px]">
-          <p className=" flex items-center gap-[5px] text-blue-600  bg-blue-600/20 px-[10px] py-[8px] rounded-[10px] text-[16px] font-extrabold my-2">
+          <p className=" flex items-center gap-[5px] text-[#6357F9]  bg-[#6357F9]/20 px-[10px] py-[8px] rounded-[10px] text-[16px] font-extrabold my-2">
             <RecentActorsIcon fontSize="small" /> Contact info
           </p>
           <p className=" flex items-baseline gap-[20px] dark:text-white text-black font-bold  text-[16px]">
             Email:{" "}
-            <span className="  text-blue-600  rounded-[10px] text-sm font-extrabold">
+            <span className="  text-[#6357F9]  rounded-[10px] text-sm font-extrabold">
               johndoe@example.com
             </span>
           </p>
           <p className=" flex items-baseline gap-[20px] dark:text-white text-black font-bold  text-[16px]">
             Phone:{" "}
-            <span className="  text-blue-600  rounded-[10px] text-sm font-extrabold">
+            <span className="  text-[#6357F9]  rounded-[10px] text-sm font-extrabold">
               +234 700 0000 000
             </span>
           </p>
 
           <p className=" flex items-baseline gap-[20px] dark:text-white text-black font-bold  text-[16px]">
             Addres:{" "}
-            <span className="  text-blue-600  rounded-[10px] text-sm font-extrabold">
+            <span className="  text-[#6357F9]  rounded-[10px] text-sm font-extrabold">
               No 01 johndoe lane,Nigeria
             </span>
           </p>
-          <p className=" flex items-center gap-[5px] text-blue-600  bg-blue-600/20 px-[10px] py-[8px] rounded-[10px] text-[16px] font-extrabold my-2">
+          <p className=" flex items-center gap-[5px] text-[#6357F9]  bg-[#6357F9]/20 px-[10px] py-[8px] rounded-[10px] text-[16px] font-extrabold my-2">
             <ContactSupportIcon fontSize="small" /> Other info
           </p>
 
           <p className=" flex items-baseline gap-[20px] dark:text-white text-black font-bold  text-[16px]">
             Sign:{" "}
-            <span className="  text-blue-600  rounded-[10px] text-sm font-extrabold">
+            <span className="  text-[#6357F9]  rounded-[10px] text-sm font-extrabold">
               Gemini
             </span>
           </p>
           <p className=" flex items-baseline gap-[20px] dark:text-white text-black font-bold  text-[16px]">
             Gender:{" "}
-            <span className="  text-blue-600  rounded-[10px] text-sm font-extrabold">
+            <span className="  text-[#6357F9]  rounded-[10px] text-sm font-extrabold">
               Male
             </span>
           </p>
@@ -224,7 +224,7 @@ function Profilebottom({ about }) {
                         key={category.name}
                         value={category.name}
                         type="button"
-                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-blue-600/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
+                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-[#6357F9]/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
                         onClick={(e) =>
                           setFormData({ ...formData, category: e.target.value })
                         }>
@@ -317,7 +317,7 @@ function Profilebottom({ about }) {
                           key={zsign}
                           value={zsign.sign}
                           type="button"
-                          className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-blue-600/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
+                          className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-[#6357F9]/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
                           onClick={(e) =>
                             setFormData({ ...formData, sign: e.target.value })
                           }>
@@ -360,7 +360,7 @@ function Profilebottom({ about }) {
                       Male
                       "
                         type="button"
-                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-blue-600/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
+                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-[#6357F9]/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
                         onClick={(e) =>
                           setFormData({ ...formData, gender: e.target.value })
                         }>
@@ -371,7 +371,7 @@ function Profilebottom({ about }) {
                       Female
                       "
                         type="button"
-                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-blue-600/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
+                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-[#6357F9]/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
                         onClick={(e) =>
                           setFormData({ ...formData, gender: e.target.value })
                         }>
@@ -382,7 +382,7 @@ function Profilebottom({ about }) {
                       Other
                       "
                         type="button"
-                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-blue-600/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
+                        className="  flex gap-[12px] py-[14px] px-[18px] hover:bg-[#6357F9]/20 hover:text-black dark:hover:text-white cursor-pointer w-full rounded-[10px]"
                         onClick={(e) =>
                           setFormData({ ...formData, gender: e.target.value })
                         }>
@@ -403,7 +403,7 @@ function Profilebottom({ about }) {
             </div>
 
             <div className=" w-full flex items-center justify-center flex-col">
-              <button className="bg-blue-600 w-full py-[10px] text-[12px] font-bold text-white rounded-[10px] my-[10px] cursor-pointer">
+              <button className="bg-[#6357F9] w-full py-[10px] text-[12px] font-bold text-white rounded-[10px] my-[10px] cursor-pointer">
                 {loading ? (
                   <div role="status">
                     <svg
