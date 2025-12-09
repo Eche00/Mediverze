@@ -10,7 +10,7 @@ function Welcome({ setHome }) {
   }
   return (
     <div
-      className="fixed top-0 left-0 w-full overflow-y-scroll bg-[#6357F9] min-h-[100vh]"
+      className="fixed top-0 left-0 w-full overflow-y-scroll bg-[#6357F9] min-h-[100vh] z-50"
     >
       {/* container  */}
       <main className="flex flex-col items-center justify-between h-[100vh] md:w-[80%] w-[90%] mx-auto overflow-y-scroll py-4">
