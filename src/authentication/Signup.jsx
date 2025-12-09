@@ -10,6 +10,7 @@ import { handleRegistration } from "../utils/regLogic";
 import { serverTimestamp } from "firebase/firestore";
 import { auth } from "../lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { Star } from "@mui/icons-material";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -89,39 +90,32 @@ function Signup() {
   };
 
   return (
-    <div className=" sm:flex sm:items-center sm:justify-center h-[100vh] bg-white dark:bg-[#1F1F1F] overflow-hidden overscroll-none ">
+    <div className="bg-[#DEEAFD] sm:flex sm:items-center sm:justify-center h-[100vh]   overflow-hidden overscroll-none ">
       {/* mobile container   */}
-      <main className=" relative flex flex-col  sm:shadow-2xl   sm:rounded-2xl  sm:h-fit h-screen  sm:w-[700px] w-full p-[20px] dark:sm:border-2 dark:border-gray-700">
-        {/* exit page */}
-        <Link to="/" className="rounded-full p-2 ">
-          <img
-            src="/logo.webp"
-            alt="logo"
-            className="w-[50px] h-[50px] object-cover border-gray-300 border-2 rounded-full "
-          />
-        </Link>
+      <main className=" relative flex flex-col  sm:shadow-2xl   sm:rounded-2xl  sm:h-fit h-screen  sm:w-[700px] w-full p-[20px] ">
+
 
         {/* subcontainer  */}
         <div className=" w-[90%] mx-auto md:w-[60%]">
-          <h1 className=" text-start dark:text-white text-black font-bold my-[30px]  text-[20px]">
+          <h1 className="   text-black font-bold my-[30px]  text-[20px] text-center">
             Create Account
           </h1>
           {/* form container  */}
           <form className="w-full" onSubmit={handleSubmit}>
             <div className=" flex flex-col gap-[5px] my-5 ">
               {error && <p className=" text-red-500 ">{error}</p>}
-              <p className=" dark:text-gray-500 text-black">Name:</p>
-              <div className="flex items-center gap-2 bg-transparent dark:bg-black border-1 border-gray-300 dark:border-gray-700  w-full px-3 py-4 rounded-[10px]  dark:text-white  text-gray-700">
-                <span className=" dark:text-gray-500 text-black border-r border-black  dark:border-gray-500 pr-2">
+              <p className="  text-black">Name:</p>
+              <div className="flex items-center gap-2 bg-transparent border-1  border-gray-300   w-full px-3 py-4 rounded-[10px]   text-gray-700 ">
+                <span className="  text-black border-r border-black   pr-2">
                   <AlternateEmailIcon fontSize="" />
                 </span>
                 <input
-                  className="  outline-none dark:text-white  text-black flex-1 placeholder:text-gray-500 "
+                  className="  outline-none   text-black flex-1 placeholder:text-gray-500 "
                   type="text"
                   name="username"
                   onChange={handleChange}
                   value={formData.username}
-                  placeholder="Enter your name"
+                  placeholder="Student name"
                 />
               </div>
               {usernameError && (
@@ -131,18 +125,18 @@ function Signup() {
               )}
             </div>
             <div className=" flex flex-col gap-[5px] my-5 ">
-              <p className=" dark:text-gray-500 text-black">Email:</p>
-              <div className="flex items-center gap-2 bg-transparent dark:bg-black border-1 border-gray-300 dark:border-gray-700  w-full px-3 py-4 rounded-[10px]  dark:text-white  text-gray-700">
-                <span className=" dark:text-gray-500 text-black border-r border-black  dark:border-gray-500 pr-2">
+              <p className="  text-black">Email:</p>
+              <div className="flex items-center gap-2 bg-transparent  border-1 border-gray-300   w-full px-3 py-4 rounded-[10px]    text-gray-700">
+                <span className="  text-black border-r border-black   pr-2">
                   <EmailIcon fontSize="" />
                 </span>
                 <input
-                  className="  outline-none dark:text-white  text-black flex-1 placeholder:text-gray-500 "
+                  className="  outline-none   text-black flex-1 placeholder:text-gray-500 "
                   type="text"
                   name="email"
                   onChange={handleChange}
                   value={formData.email}
-                  placeholder="Enter your email"
+                  placeholder="Student email"
                 />
               </div>
               {emailError && (
@@ -150,10 +144,10 @@ function Signup() {
               )}
             </div>
             <div className=" flex flex-col gap-[5px] my-5 ">
-              <p className=" dark:text-gray-500 text-black">Password:</p>
-              <div className="flex items-center gap-2 bg-transparent dark:bg-black border-1 border-gray-300 dark:border-gray-700  w-full px-3 py-4 rounded-[10px]  dark:text-white  text-gray-700">
+              <p className="  text-black">Password:</p>
+              <div className="flex items-center gap-2 bg-transparent  border-1 border-gray-300   w-full px-3 py-4 rounded-[10px]    text-gray-700">
                 <span
-                  className=" dark:text-gray-500 text-black border-r border-black  dark:border-gray-500 pr-2 cursor-pointer"
+                  className="  text-black border-r border-black   pr-2 cursor-pointer"
                   onClick={() => setVisible(!visible)}>
                   {visible ? (
                     <VisibilityIcon fontSize="" />
@@ -162,7 +156,7 @@ function Signup() {
                   )}
                 </span>
                 <input
-                  className="  outline-none dark:text-white  text-black flex-1 placeholder:text-gray-500 "
+                  className="  outline-none   text-black flex-1 placeholder:text-gray-500 "
                   type={visible ? "text" : "password"}
                   name="password"
                   placeholder="Create a password"
@@ -178,22 +172,22 @@ function Signup() {
               </p>
             </div>
             <div className="  flex items-center gap-[10px] ">
-              <span className="flex-1 bg-gray-300 dark:bg-gray-700 h-[0.2px] "></span>
-              <span className=" text-gray-400 dark:text-gray-700">
+              <span className="flex-1 bg-gray-300  h-[1px] "></span>
+              <span className=" text-[#0B1A37] ">
                 {" "}
-                <KeyboardArrowDownIcon />
+                <Star />
               </span>
-              <span className="flex-1 bg-gray-300 dark:bg-gray-700 h-[0.2px] "></span>
+              <span className="flex-1 bg-gray-300  h-[1px] "></span>
             </div>
             <div className=" w-full flex items-center justify-center flex-col">
               <button
-                className="bg-blue-600 w-full py-[10px] text-[12px] font-bold text-white rounded-[10px] my-[10px] cursor-pointer"
+                className="bg-[#6357F9] w-full py-3 text-md font-bold text-white rounded-[10px] my-[10px] cursor-pointer"
                 type="submit">
                 {loading ? (
                   <div role="status">
                     <svg
                       aria-hidden="true"
-                      className="inline w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-[#1e222b]"
+                      className="inline w-4 h-4 text-gray-200 animate-spin  fill-[#1e222b]"
                       viewBox="0 0 100 101"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -213,9 +207,9 @@ function Signup() {
                 )}
               </button>
             </div>
-            <p className="text-sm font-bold text-center dark:text-white text-black">
+            <p className="text-sm font-bold text-center  text-black">
               Have an account ?{" "}
-              <Link to="/signin" className=" underline text-blue-600">
+              <Link to="/signin" className=" underline text-[#6357F9]">
                 Sign in
               </Link>
             </p>

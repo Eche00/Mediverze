@@ -44,14 +44,9 @@ function Welcome({ setHome }) {
           </div>
         </section>
         {/* CTA section  */}
-        <section className="w-full flex flex-col gap-4">
+        <section className="w-full flex">
           <Link to="/signup" className="w-full text-[24px] font-[300] text-center  bg-white text-[#0B1A37] py-[16px] px-[32px] rounded-[20px] cursor-pointer" onClick={getStarted}>Get started</Link>
-          <p className="text-sm font-bold text-center  text-white">
-            Have an account ?{" "}
-            <Link to="/signin" className=" underline text-[#0B1A37]">
-              Sign in
-            </Link>
-          </p>
+
         </section>
       </main>
     </div>
