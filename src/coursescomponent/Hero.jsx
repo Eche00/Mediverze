@@ -18,8 +18,9 @@ function Hero() {
         </div>
         {/* info section  */}
         <section className=" flex flex-col gap-[4px] p-6 z-50">
-          <h1 className=" text-white sm:text-4xl text-2xl font-[300] flex items-center gap-1"><FontAwesomeIcon icon={faBook} size="sm" /> Courses
-            <p className=" text-gray-200 text-[16px] sm:text-[24px] mt-1 flex items-center ">{"> "}
+          <h1 className=" text-white sm:text-4xl text-2xl font-[300] flex flex-col items-start gap-1 text-wrap ">
+            <span><FontAwesomeIcon icon={faBook} size="sm" /> Courses</span>
+            <p className=" text-gray-200 text-[10px] sm:text-[24px] mt-1  items-center text-wrap inline-block">{"> "}
               {location.pathname.replace('/courses/', '').toLocaleUpperCase() || "ALL COURSES"}
             </p>
           </h1>
