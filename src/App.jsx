@@ -10,11 +10,10 @@ import Signup from "./authentication/Signup";
 import Signin from "./authentication/Signin";
 import ForgotPassword from "./authentication/ForgotPassword";
 import Welcome from "./component/Welcome";
-import All from "./coursescomponent/courses/All";
-import LevelTwo from "./coursescomponent/courses/LevelTwo";
-import LevelThree from "./coursescomponent/courses/LevelThree";
-import LevelFour from "./coursescomponent/courses/LevelFour";
-import CourseViewer from "./coursescomponent/courses/CourseViewer";
+import LevelPage from "./coursescomponent/courses/LevelPage";
+import SemesterPage from "./coursescomponent/courses/SemesterPage";
+import CoursePage from "./coursescomponent/courses/CoursePage";
+import PdfViewer from "./coursescomponent/courses/PdfViewer";
 
 function App() {
 
@@ -24,13 +23,14 @@ function App() {
         <Route path="/" element={<Container />}>
           <Route index element={<Welcome />} />
           <Route path="home" element={<Home />} />
-          <Route path="courses" element={<Courses />} >
-            <Route index element={<All />} />
-            <Route path="200l" element={<LevelTwo />} />
-            <Route path="300l" element={<LevelThree />} />
-            <Route path="400l" element={<LevelFour />} />
-            <Route path=":level/:courseId" element={<CourseViewer />} />
+          <Route path="courses" element={<Courses />}>
+
+            <Route path=":level" element={<LevelPage />} />
+            <Route path=":level/:semester" element={<SemesterPage />} />
+            <Route path=":level/:semester/:courseId" element={<CoursePage />} />
+            <Route path=":level/:semester/:courseId/:pdfId" element={<PdfViewer />} />
           </Route>
+
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="profile" element={<Profile />} />
